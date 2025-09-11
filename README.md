@@ -2,7 +2,13 @@
 
 Command-line todo list application.
 
-Run using `tsx index.ts`
+Get started with the activity:
+- `git clone https://github.com/NathanDai5287/BTLT.git`
+- `cd BTLT`
+- `npm install`
+- Run your code using `npx tsx index.ts`
+
+Below are the commands you should implement in the `index.ts` file.
 
 ## Usage
 

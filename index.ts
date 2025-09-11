@@ -1,8 +1,8 @@
 const input = require('prompt-sync')();
 
 interface TodoItem {
-	text: string;
 	id: number;
+	// TODO
 }
 
 const todo: TodoItem[] = [];
