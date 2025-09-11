@@ -1,0 +1,17 @@
+{
+  "name": "btlt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.3.1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
