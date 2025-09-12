@@ -1,6 +1,6 @@
 const input = require('prompt-sync')();
 
-interface TodoItem {
+type TodoItem = {
 	id: number;
 	// TODO
 }
