@@ -1,2 +1,27 @@
-/node_modules
-/package-lock.json
+*/node_modules
+*/package-lock.json
+
+# Logs
+lab02_react/logs
+lab02_react/*.log
+lab02_react/npm-debug.log*
+lab02_react/yarn-debug.log*
+lab02_react/yarn-error.log*
+lab02_react/pnpm-debug.log*
+lab02_react/lerna-debug.log*
+
+lab02_react/node_modules
+lab02_react/dist
+lab02_react/dist-ssr
+lab02_react/*.local
+
+lab02_react/# Editor directories and files
+lab02_react/.vscode/*
+lab02_react/!.vscode/extensions.json
+lab02_react/.idea
+lab02_react/.DS_Store
+lab02_react/*.suo
+lab02_react/*.ntvs*
+lab02_react/*.njsproj
+lab02_react/*.sln
+lab02_react/*.sw?
