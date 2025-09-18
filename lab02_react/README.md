@@ -75,6 +75,12 @@ Complete the TODO comments in `src/App.tsx`:
 - Update the existing todo's text with the new text
 - Maintain the same ID
 
+Complete the TODO comment in `src/components/TodoItem.tsx`:
+
+### `saveEdit()` function
+- Call the `onEdit` prop with the new text from the edit input
+- Exit edit mode by setting `isEditing` to false
+
 ## Testing Your Implementation
 
 Verify your app works by:
