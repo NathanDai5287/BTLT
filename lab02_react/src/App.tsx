@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import TodoItem from './components/TodoItem';
 
 type TodoItem = {
 	id: number;
@@ -8,8 +9,6 @@ type TodoItem = {
 const App = () => {
 	const [todos, setTodos] = useState<TodoItem[]>([]);
 	const [newTodoText, setNewTodoText] = useState('');
-	const [editingId, setEditingId] = useState<number | null>(null);
-	const [editText, setEditText] = useState('');
 
 	const addTodo = () => {
 		// TODO: implement add functionality
@@ -19,16 +18,8 @@ const App = () => {
 		// TODO: implement delete functionality
 	};
 
-	const startEdit = (id: number, currentText: string) => {
-		// TODO: implement edit mode
-	};
-
-	const saveEdit = () => {
-		// TODO: implement save edit functionality
-	};
-
-	const cancelEdit = () => {
-		// TODO: implement cancel edit functionality
+	const editTodo = (id: number, newText: string) => {
+		// TODO: implement edit functionality
 	};
 
 	return (
@@ -49,29 +40,13 @@ const App = () => {
 			{/* Todo List */}
 			<div className="todo-list">
 				{todos.map((todo) => (
-					<div key={todo.id} className="todo-item">
-						{editingId === todo.id ? (
-							// Edit mode
-							<div className="edit-mode">
-								<input
-									type="text"
-									value={editText}
-									onChange={(e) => setEditText(e.target.value)}
-								/>
-								<button onClick={saveEdit}>Save</button>
-								<button onClick={cancelEdit}>Cancel</button>
-							</div>
-						) : (
-							// Display mode
-							<div className="display-mode">
-								<span className="todo-text">#{todo.id}: {todo.text}</span>
-								<div className="todo-actions">
-									<button onClick={() => startEdit(todo.id, todo.text)}>Edit</button>
-									<button onClick={() => deleteTodo(todo.id)}>Delete</button>
-								</div>
-							</div>
-						)}
-					</div>
+					<TodoItem
+						key={todo.id}
+						id={todo.id}
+						text={todo.text}
+						onEdit={editTodo}
+						onDelete={deleteTodo}
+					/>
 				))}
 			</div>
 
