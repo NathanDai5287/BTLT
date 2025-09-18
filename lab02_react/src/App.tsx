@@ -1,57 +1,56 @@
 import { useState } from 'react';
 import TodoItem from './components/TodoItem';
 
-type TodoItem = {
+type Todo = {
 	id: number;
 	text: string;
 };
 
 const App = () => {
-	const [todos, setTodos] = useState<TodoItem[]>([]);
+	const [todo, setTodo] = useState<Todo | null>(null);
 	const [newTodoText, setNewTodoText] = useState('');
 
 	const addTodo = () => {
 		// TODO: implement add functionality
 	};
 
-	const deleteTodo = (id: number) => {
+	const deleteTodo = () => {
 		// TODO: implement delete functionality
 	};
 
-	const editTodo = (id: number, newText: string) => {
+	const editTodo = (newText: string) => {
 		// TODO: implement edit functionality
 	};
 
 	return (
 		<div className="todo-app">
-			<h1>Todo List</h1>
+			<h1>Todo App</h1>
 
-			{/* Add Todo Section */}
+			{/* Add/Update Todo Section */}
 			<div className="add-todo">
 				<input
 					type="text"
 					value={newTodoText}
 					onChange={(e) => setNewTodoText(e.target.value)}
-					placeholder="Enter new todo..."
+					placeholder="Enter todo..."
 				/>
-				<button onClick={addTodo}>Add</button>
+				<button onClick={addTodo}>{todo ? 'Update' : 'Add'}</button>
 			</div>
 
-			{/* Todo List */}
-			<div className="todo-list">
-				{todos.map((todo) => (
+			{/* Single Todo Display */}
+			{todo && (
+				<div className="todo-display">
 					<TodoItem
-						key={todo.id}
 						id={todo.id}
 						text={todo.text}
 						onEdit={editTodo}
 						onDelete={deleteTodo}
 					/>
-				))}
-			</div>
+				</div>
+			)}
 
-			{todos.length === 0 && (
-				<p className="no-todos">No todos yet. Add one above!</p>
+			{!todo && (
+				<p className="no-todo">No todo yet. Add one above!</p>
 			)}
 		</div>
 	);

@@ -3,8 +3,8 @@ import { useState } from 'react';
 type TodoItemProps = {
 	id: number;
 	text: string;
-	onEdit: (id: number, newText: string) => void;
-	onDelete: (id: number) => void;
+	onEdit: (newText: string) => void;
+	onDelete: () => void;
 };
 
 const TodoItem = ({ id, text, onEdit, onDelete }: TodoItemProps) => {
@@ -17,7 +17,7 @@ const TodoItem = ({ id, text, onEdit, onDelete }: TodoItemProps) => {
 	};
 
 	const saveEdit = () => {
-		onEdit(id, editText);
+		onEdit(editText);
 		setIsEditing(false);
 	};
 
@@ -43,7 +43,7 @@ const TodoItem = ({ id, text, onEdit, onDelete }: TodoItemProps) => {
 					<span className="todo-text">#{id}: {text}</span>
 					<div className="todo-actions">
 						<button onClick={startEdit}>Edit</button>
-						<button onClick={() => onDelete(id)}>Delete</button>
+						<button onClick={onDelete}>Delete</button>
 					</div>
 				</div>
 			)}
