@@ -17,8 +17,7 @@ const TodoItem = ({ id, text, onEdit, onDelete }: TodoItemProps) => {
 	};
 
 	const saveEdit = () => {
-		onEdit(editText);
-		setIsEditing(false);
+		// TODO: call onEdit with the new text and exit edit mode
 	};
 
 	const cancelEdit = () => {
