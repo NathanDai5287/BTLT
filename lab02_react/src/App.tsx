@@ -7,9 +7,9 @@ type Todo = {
 };
 
 const App = () => {
-  const [todo, setTodo] = useState<Todo | null>(null);
-  const [newTodoText, setNewTodoText] = useState<string>("");
-  const [nextId, setNextId] = useState<number>(1);
+  const [todo, setTodo] = useState<Todo | null>(null); // todo that is displayed to the user
+  const [newTodoText, setNewTodoText] = useState<string>(""); // always tracks the text in the input field
+  const [nextId, setNextId] = useState<number>(1); // the id to be assigned to the next todo created
 
   const addTodo = () => {
     // TODO: implement add functionality
