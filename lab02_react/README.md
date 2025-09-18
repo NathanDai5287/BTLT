@@ -13,7 +13,7 @@ Below are the features you should implement in the React components.
 Your completed todo app should:
 - Display a single todo item at a time (not a list)
 - Allow adding a new todo only when no todo exists
-- Disable adding when a todo already exists (must delete first)
+- Cannot add additional todo when one already exists (must delete first todo first)
 - Allow editing the current todo inline
 - Allow deleting the current todo
 - Maintain an incrementing ID counter that never decreases
