@@ -3,6 +3,7 @@ import { MyApp as Lec02Components } from './demos/lec02-creating-using-component
 import { PersonHighlight as Lec02DisplayingData } from './demos/lec02-displaying-data'
 import { InputAge as Lec02State } from './demos/lec02-state'
 import { BirthdayAge as Lec02SetStateFunction } from './demos/lec02-set-state-function'
+import { UseEffectDemo as Lec03UseEffect } from './demos/lec03-use-effect'
 
 function App() {
   const componentMap: Record<string, JSX.Element> = {
@@ -10,6 +11,7 @@ function App() {
     lec02DisplayingData: <Lec02DisplayingData />,
     lec02State: <Lec02State />,
     lec02SetStateFunction: <Lec02SetStateFunction />,
+    lec03UseEffect: <Lec03UseEffect />,
   };
 
   const [selected, setSelected] = useState("lec02Components");
