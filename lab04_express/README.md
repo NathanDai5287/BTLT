@@ -18,6 +18,17 @@ The server should support:
 
 More instructions for each functionality is provided in comments in the code.
 
+## Setup
+
+In the `btlt` folder:
+
+1. `git pull`
+2. `cd lab04_express`
+3. `npm install`
+4. To run the server: `npm run dev`
+
+The route prefix  to put into Insomnia is: `http://localhost:5001`
+
 ## Files to Modify
 
 - `src/index.ts`
